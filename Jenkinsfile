@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    tools{
-        maven 'Maven 3.9.0'
-        jdk 'jdk8'
+    tools {
+       maven 'MAVEN_HOME'
+       jdk 'JAVA_HOME'
     }
 
     stages {
@@ -16,6 +16,8 @@ pipeline {
         stage('UNIT Test'){
 
             steps{
+            echo "PATH = ${PATH}"
+            echo "M2_HOME = ${M2_HOME}"
              sh 'mvn test'
             }
         }
