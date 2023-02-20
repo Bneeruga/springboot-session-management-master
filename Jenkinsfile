@@ -12,8 +12,7 @@ pipeline {
         stage('UNIT Test'){
 
             steps{
-            echo "PATH = ${PATH}"
-            echo "M2_HOME = ${M2_HOME}"
+
              sh 'mvn test'
             }
         }
