@@ -6,7 +6,7 @@ pipeline {
         stage('Git Checkout'){
 
             steps{
-                git 'https://github.com/Bneeruga/springboot-session-management-master.git'
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Bneeruga/springboot-session-management-master.git']])
             }
         }
 
